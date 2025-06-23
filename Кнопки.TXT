@@ -1,0 +1,45 @@
+SpisokZayavok.xaml.cs:
+Добавление (код кнопки сохранения): 
+private void Button_Click(object sender, RoutedEventArgs e)
+ {
+     //prilEntities5.GetContext().GruppovayaZayavka.Add(_gruppvisitors);
+     //try
+     //{
+     //    //prilEntities5.GetContext().SaveChanges();
+     //    MessageBox.Show("Сохранено");
+     //    this.Close();
+     //}
+     //catch (Exception ex)
+     //{
+     //    MessageBox.Show(ex.Message.ToString());
+     //}
+     MessageBox.Show("Сохранено");
+     this.Close();
+
+	}
+
+Удаление:
+ private void Delete(object sender, RoutedEventArgs e)
+ {
+     var foremove = Zayavkis.SelectedItems.Cast<LichnayaZayavka>().ToList();
+     if (foremove.Count == 0)
+     {
+         MessageBox.Show("Выделите нужную запись для удаления");
+     }
+     else
+         if (MessageBox.Show($"Вы точно хотите удалить следующие {foremove.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+     {
+         try
+         {
+             prilEntities5.GetContext().LichnayaZayavka.RemoveRange(foremove);
+             prilEntities5.GetContext().SaveChanges();
+             Zayavkis.ItemsSource = prilEntities5.GetContext().Aut.ToList();
+
+         }
+         catch (Exception ex)
+         {
+             MessageBox.Show(ex.Message.ToString());
+         }
+			MessageBox.Show("Успешно удалено");
+
+		}
