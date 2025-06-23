@@ -1,0 +1,40 @@
+﻿<Window x:Class="Priiil.UserPages.ViborZayavki"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Priiil.UserPages"
+        mc:Ignorable="d"
+       d:DesignHeight="295" d:DesignWidth="1041"
+Title="Выбор заявки"  MaxWidth="1041" MaxHeight="350" ResizeMode="NoResize">
+
+    <Grid Background="LightGray" MaxWidth="1100" MaxHeight="400" RenderTransformOrigin="0.672,0.559">
+        <Image HorizontalAlignment="Left" Height="100" Margin="290,49,0,0" VerticalAlignment="Top" Width="187" Source="/UserPages/solo.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="635,49,0,0" VerticalAlignment="Top" Width="192" Source="/UserPages/ne solo.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.241"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.393"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Label Uid="0" MaxWidth="525" MaxHeight="50"  Content="Групповая" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click_1" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="601,157,256,82"/>
+        <Label Uid="1" MaxWidth="525" MaxHeight="50"  Content="Личная" FontSize="20" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click_2" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="271,159,586,80"/>
+
+        <Grid Uid="0" x:Name="CurMain" MaxWidth="525" Width="109" MaxHeight="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="636,150,0,116" RenderTransformOrigin="0.505,1.332"/>
+        <Grid Uid="1" x:Name="CurDol" MaxHeight="5" MaxWidth="525" Width="146" Background="#FF2196F3" HorizontalAlignment="Left" Margin="289,151,0,117" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.56"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+        </Grid>
+
+    </Grid>
+</Window>

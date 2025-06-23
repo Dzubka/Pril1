@@ -1,0 +1,48 @@
+﻿<Window x:Class="Priiil.UserPages.User"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Priiil.UserPages"
+        mc:Ignorable="d"
+               Title="Главная страница" Height="450" Width="1050" ResizeMode="NoResize" Background="LightGray">
+    <Grid>
+        <StackPanel>
+            <Grid Height="47" Background="LightSkyBlue" RenderTransformOrigin="0.618,0.492">
+                <StackPanel MaxHeight="178,31"  Orientation="Horizontal" HorizontalAlignment="Left" Margin="20 0 0 0" >
+                    <TextBlock Text="Заказ пропусков" Background="{x:Null}" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="721,0,0,0" Width="308">
+                    <Button x:Name="InfoSistem" MaxHeight="47" MaxWidth="103" Content="О системе" Click="InfoSistem_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" FontWeight="Bold" Width="103" Height="47"/>
+                    <Button x:Name="Contact" MaxHeight="47" MaxWidth="103" Click="Contact_Click" Content="Контакты" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Width="103" Height="47" />
+                    <!--<Button Content="Личный кабинет" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFA2A2A2" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Click="Button_Click_2"/>-->
+                    <Button x:Name="Exit" Content="Exit" MaxHeight="47" MaxWidth="103" Click="Exit_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Height="47" Margin="0,8" Width="103" >
+                        <!--Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"-->
+                        <!--<materialDesign:PackIcon Kind="Power" Foreground="#FFA2A2A2" Width="25" Height="25" />-->
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Height="50" Margin="0,40,0,329">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0,-5,0,0">
+                <Label Uid="0" MaxWidth="525" Width="346" MaxHeight="50"  Content="Главная" FontSize="20" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Uid="1" MaxWidth="525" Width="337" MaxHeight="50"  Content="Список личных заявок" FontSize="20" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Uid="2" MaxWidth="525" Width="366" MaxHeight="50"  Content="Список групповых заявок" FontSize="20" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <!--<Label Uid="2" Width="150" Content="Товары" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Uid="3" Width="150" Content="Бренды" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" MouseEnter="Label_MouseEnter" MouseDown="Button_Click" MouseLeave="Label_MouseLeave" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>-->
+            </StackPanel>
+            <Grid Uid="0" x:Name="CurMain" MaxWidth="525" Width="525" MaxHeight="5" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="0,35,0,10"></Grid>
+            <Grid Uid="1" x:Name="CurDol" MaxHeight="5" MaxWidth="525" Width="525" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="525,35,0,10"/>
+            <!--<Grid Uid="2" x:Name="CurTov" Width="150" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="310,35,0,10"/>
+    <Grid Uid="3" x:Name="CurBrands" Width="150" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="460,35,0,10"/>-->
+
+        </Grid>
+        <Grid MaxHeight="346,04" MaxWidth="1050" x:Name="gridenko" Margin="0,88,0,46" Background="LightSkyBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <TextBlock Text="  Лицензия 2024 | Tymen"  FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="396,385,427,0" Width="218" Height="34"/>
+    </Grid>
+</Window>

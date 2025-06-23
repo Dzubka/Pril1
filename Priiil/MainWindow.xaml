@@ -1,0 +1,24 @@
+﻿<Window x:Class="Priiil.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Priiil"
+        mc:Ignorable="d"
+            Title="MainWindow" Height="450" Width="450" ResizeMode="NoResize">
+    <Grid Background="AliceBlue">
+        <Button x:Name="LOG"  Click="Come_BN_Click" Content="Войти" FontSize="23" Margin="101,290,102,55" />
+        <StackPanel Margin="101,10,102,55">
+            <Label Content="Логин" FontSize="20" Margin="0,0,0,10" Height="40"/>
+            <TextBox x:Name="logen" FontSize="20" Margin="0,0,0,10" Height="35" TextChanged="logen_TextChanged"/>
+            <Label Content="Пароль" FontSize="20" Margin="0,0,0,10" Height="40"/>
+            <PasswordBox x:Name="passiword" FontSize="20" Margin="0,0,0,10" Height="35" Width="243"/>
+            <Label Content="Войти как" FontSize="20" Margin="0,0,0,10" Height="35" />
+            <ComboBox FontSize="20" x:Name="doln" Height="35" SelectionChanged="doln_SelectionChanged" Width="245">
+                <Label Content="admin"/>
+                <Label Content="user"/>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+    
+</Window>

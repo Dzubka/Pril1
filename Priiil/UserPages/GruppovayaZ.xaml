@@ -1,0 +1,123 @@
+﻿<Window x:Class="Priiil.UserPages.GruppovayaZ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Priiil.UserPages"
+        mc:Ignorable="d"
+        Title="GruppovayaZ" Height="500" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <StackPanel Margin="78,10,417,272">
+            <TextBlock Text="Информация для пропуска" Background="Orange" Margin="10,10,10,10" />
+            <TextBlock Text="Срок действия заявки:" Margin="10,0,10,10"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="С" Margin="10,0,5,10"/>
+                <DatePicker SelectedDateFormat="Short" Text="" Width="100" Margin="5,0,5,10"/>
+                <TextBlock Text="По" Margin="5,0,5,10"/>
+                <DatePicker SelectedDateFormat="Short" Width="100" Margin="5,0,5,10"/>
+            </StackPanel>
+            <TextBlock Text="Цель посещения:" Margin="10,0,10,10"/>
+            <ComboBox Text="{Binding Tsel_posecheniya}" Margin="10,0,10,10">
+                <Label Content="BGI тур"/>
+                <Label Content="Встреча с 92"/>
+                <Label Content="Встреча с TheFirstGreatEmperorVseyaDZUBDPIPerviyNepovtorimyVelichayshiyEdinstveniyNaslednikTronaKontoriDDPIATaksheTheBestPlayerOnTheGalaxyVtroyne. The_Great_De.Sayler_Zer0"/>
+                <Label Content="Мастер класс с 194"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Margin="418,10,77,280">
+            <TextBlock Text="Принимающая сторона" Background="Orange" Margin="10,10,10,10" />
+            <TextBlock Text="Подразделение:" Margin="10,0,10,10"/>
+            <ComboBox Text="{Binding Podrazdelenie}" Margin="10,0,10,10">
+                <Label Content="Заведующий"/>
+                <Label Content="Администрация"/>
+                <Label Content="Отдел кадров"/> 
+            </ComboBox>
+            <TextBlock Text="ФИО:" Margin="10,0,10,10" RenderTransformOrigin="0.505,1.201"/>
+            <TextBox Width="280" Margin="5,0,5,10"/>
+        </StackPanel>
+
+        <StackPanel Margin="78,167,252,54">
+            <TextBlock Text="Информация о посетителе" Background ="Orange" Margin="10,10,10,10" />
+            <StackPanel Orientation="Horizontal" Height="182">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="80" Content="Фамилия:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Surname}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="80" Content="Имя:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Name}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="80" Content="Отчество:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Dadname}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="80" Content="Телефон:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Phone_number}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="80" Content="E-mail:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Email}" Width="100" Margin="10,5,10,10" Height="27" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" Content="Организация:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Organization}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" Content="Примечание:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Description}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" Content="Дата рождения:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Date_of_birth}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" Content="Серия:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Seriya}" Width="100" Margin="10,5,10,10" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="100" Content="Номер:" Margin="10,0,10,10"/>
+                        <TextBox Text="{Binding Number}" Width="100" Margin="10,5,10,10" Height="30" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="78,389,425,0">
+            <TextBlock Text="Прикрепляемые документы" Background ="Orange" Margin="10,10,10,10" />
+            <StackPanel Orientation="Horizontal">
+                <Image Source="https://www.kindpng.com/picc/m/481-4815471_download-icon-download-icon-font-awesome-hd-png.png" Height="25" Width="45"/>
+                <Label Content="Прикрепить файл"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="400,400,103,0"/>
+        <StackPanel Margin="553,167,38,68">
+            <TextBlock Text="Список посетителей" Background="Orange" Margin="10,10,10,10" />
+            <DataGrid x:Name="Visitors" FontSize="8" SelectedItem="{Binding Path = SelecteCustome, Mode=TwoWay}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsReadOnly="True" AutoGenerateColumns="False" Height="102" Width="190">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№" Width="*" FontSize="13" Binding="{Binding ID}" />
+                    <DataGridTextColumn Header="ФИО" Width="*" FontSize="13" Binding="{Binding FIO}"/>
+                    <DataGridTextColumn Header="Телефон" Width="*" FontSize="13" Binding="{Binding Phone_number}"/>
+                    <DataGridTextColumn Header="Email" Width="*" FontSize="13" Binding="{Binding Email}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Click="AddVisitor" Content="Добавить посетителя" Width="180" Height="28"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="452,389,48,10">
+            <Button Content="Очистить Форму" Margin="10" Click="Button_Click_1" Height="61"/>
+            <Button Content="Оформить заявку" Margin="10" Click="Button_Click" Height="60"/>
+        </StackPanel>
+    </Grid>
+</Window>
